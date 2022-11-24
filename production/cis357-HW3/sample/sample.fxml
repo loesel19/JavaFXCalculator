@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="225.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <VBox prefHeight="300.0" prefWidth="225.0">
+         <children>
+            <TextField fx:id="txtCalc" alignment="CENTER_RIGHT" focusTraversable="false" prefHeight="75.0" prefWidth="225.0" style="-fx-background-color: lightslategray; -fx-text-inner-color: cornsilk;">
+               <opaqueInsets>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </opaqueInsets>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </TextField>
+            <GridPane prefHeight="225.0" prefWidth="225.0" style="-fx-background-color: lightgrey;">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Button fx:id="btnAC" mnemonicParsing="false" onAction="#setAllClear" prefHeight="45.0" prefWidth="56.0" style="-fx-background-color: grey; -fx-text-fill: white;" text="AC">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnPercent" mnemonicParsing="false" onAction="#getPercentage" prefHeight="45.0" prefWidth="56.0" style="-fx-background-color: grey; -fx-text-fill: white;" text="\%" GridPane.columnIndex="2">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnNegative" mnemonicParsing="false" onAction="#getNegative" prefHeight="45.0" prefWidth="56.0" style="-fx-background-color: grey; -fx-text-fill: white;" text="+/-" GridPane.columnIndex="1">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnDivision" mnemonicParsing="false" onAction="#setDivision" prefHeight="45.0" prefWidth="57.0" style="-fx-background-color: darkorange; -fx-text-fill: white;" text="/" GridPane.columnIndex="3">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnAdd" mnemonicParsing="false" onAction="#setAdd" prefHeight="45.0" prefWidth="57.0" style="-fx-background-color: darkorange; -fx-text-fill: white;" text="+" GridPane.columnIndex="3" GridPane.rowIndex="3">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnSubtract" mnemonicParsing="false" onAction="#setSubtract" prefHeight="45.0" prefWidth="57.0" style="-fx-background-color: darkorange; -fx-text-fill: white;" text="-" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnMultiply" mnemonicParsing="false" onAction="#setMultiply" prefHeight="45.0" prefWidth="57.0" style="-fx-background-color: darkorange; -fx-text-fill: white;" text="X" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnCalculate" mnemonicParsing="false" onAction="#getCalculation" prefHeight="45.0" prefWidth="57.0" style="-fx-background-color: darkorange; -fx-text-fill: white;" text="=" GridPane.columnIndex="3" GridPane.rowIndex="4">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnSeven" mnemonicParsing="false" onAction="#setNumber" prefHeight="45.0" prefWidth="56.0" style="-fx-background-color: lightgrey; -fx-text-fill: cornsilk;" text="7" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnEight" mnemonicParsing="false" onAction="#setNumber" prefHeight="45.0" prefWidth="56.0" style="-fx-background-color: lightgrey; -fx-text-fill: cornsilk;" text="8" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnNine" mnemonicParsing="false" onAction="#setNumber" prefHeight="45.0" prefWidth="56.0" style="-fx-background-color: lightgrey; -fx-text-fill: cornsilk;" text="9" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnFour" mnemonicParsing="false" onAction="#setNumber" prefHeight="45.0" prefWidth="56.0" style="-fx-background-color: lightgrey; -fx-text-fill: cornsilk;" text="4" GridPane.rowIndex="2">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnFive" mnemonicParsing="false" onAction="#setNumber" prefHeight="45.0" prefWidth="56.0" style="-fx-background-color: lightgrey; -fx-text-fill: cornsilk;" text="5" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnSix" mnemonicParsing="false" onAction="#setNumber" prefHeight="45.0" prefWidth="56.0" style="-fx-background-color: lightgrey; -fx-text-fill: cornsilk;" text="6" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnOne" mnemonicParsing="false" onAction="#setNumber" prefHeight="45.0" prefWidth="56.0" style="-fx-background-color: lightgrey; -fx-text-fill: cornsilk;" text="1" GridPane.rowIndex="3">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnTwo" mnemonicParsing="false" onAction="#setNumber" prefHeight="45.0" prefWidth="56.0" style="-fx-background-color: lightgrey; -fx-text-fill: cornsilk;" text="2" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnThree" mnemonicParsing="false" onAction="#setNumber" prefHeight="45.0" prefWidth="56.0" style="-fx-background-color: lightgrey; -fx-text-fill: cornsilk;" text="3" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnZero" mnemonicParsing="false" onAction="#setNumber" prefHeight="45.0" prefWidth="112.0" style="-fx-background-color: lightgrey; -fx-text-fill: cornsilk;" text="0" GridPane.columnSpan="2" GridPane.rowIndex="4">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnDecimal" mnemonicParsing="false" onAction="#setDecimal" prefHeight="45.0" prefWidth="56.0" style="-fx-background-color: lightgrey; -fx-text-fill: cornsilk;" text="." GridPane.columnIndex="2" GridPane.rowIndex="4">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Button>
+               </children>
+            </GridPane>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
